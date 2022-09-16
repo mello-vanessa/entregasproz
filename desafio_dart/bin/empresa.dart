@@ -48,12 +48,7 @@ class Empresa {
     print("Empresa cadastrada com sucesso.");
     retornoDados(listaMapasDefault);
   }
-
-  void mostrarEmpresas(List<Map<String, dynamic>> listaMapasDefault){
-    for(int i = 0; i < listaMapasDefault.length; i++){
-      print("${i+1}: ${listaMapasDefault[i]}");
-    }
-  }
+    
   void mostrarEmpresasRazaoSocial(List<Map<String, dynamic>> listaMapasDefault){
     print("Lista de empresas em ordem alfabética por Razão Social.");
     final listaOrdenada = List<Map<String, dynamic>>.from(listaMapasDefault);
@@ -70,22 +65,27 @@ class Empresa {
         retornoDados(listaMapasDefault);
       }
       else {
-        print("$cnpjPesquisa não encontrado");
+        print("$cnpjPesquisa não encontrado.");
       }
     }    
   }
 
   void buscarEmpresasPorSocio(List<Map<String, dynamic>> listaMapasDefault){
-    print("Digite o CNPJ ou CPF do sócio:");
+    print("Digite o CNPJ ou CPF do sócio ou 0 para listar as empresas.");
     String docPesquisa = stdin.readLineSync()!;
-    for(int i = 0; i < listaMapasDefault.length; i++){
-      if(listaMapasDefault[i]['socio'].documento.replaceAll(".", "").replaceAll("/", "").replaceAll("-", "") == docPesquisa){
-        retornoDados(listaMapasDefault);
+    if(docPesquisa == "0") {
+      mostrarEmpresasRazaoSocial(listaMapasDefault);
+    } else {
+        for(int i = 0; i < listaMapasDefault.length; i++){
+          if(listaMapasDefault[i]['socio'].documento.replaceAll(".", "").replaceAll("/", "").replaceAll("-", "") == docPesquisa){
+            retornoDados(listaMapasDefault);
+          }
+          else {
+            print("$docPesquisa não encontrado, segue lista das empresas cadastradas.");
+            mostrarEmpresasRazaoSocial(listaMapasDefault);
+          }
+        }
       }
-      else {
-        print("$docPesquisa não encontrado");
-      }
-    } 
   }  
 
   void retornoDados(List<Map<String, dynamic>> listaMapasDefault){

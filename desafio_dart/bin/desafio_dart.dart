@@ -48,7 +48,7 @@ void main(List<String> arguments) {
     bairro: "Centro", 
     cidade: "Porto Alegre",
     estado: "RS"), 
-    socio: socio01pj);
+    socio: socio01pf);
 
   do {
     print('''

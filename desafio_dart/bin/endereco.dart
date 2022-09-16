@@ -18,7 +18,7 @@ class Endereco {
   });
 
     String get cep{
-    String cepTratado = "${_cep.substring(0,5)}-${_cep.substring(5,8)}";
+    String cepTratado = "${_cep.substring(0,2)}.${_cep.substring(2,5)}-${_cep.substring(5,8)}";
     return cepTratado;
   }
 }

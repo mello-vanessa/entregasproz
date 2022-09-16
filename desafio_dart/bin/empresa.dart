@@ -93,9 +93,9 @@ class Empresa {
         String dados = "";
         try{
           listaMapasDefault[i]['socio'].nomefantasia;
-          dados = "CNPJ: ${listaMapasDefault[i]['socio'].documento}\nRazão social: ${listaMapasDefault[i]['socio'].nome}\nNome Fantasia: ${listaMapasDefault[i]['socio'].nomefantasia}\nEndereço: ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.numero}, ${listaMapasDefault[i]['socio'].endereco.bairro}, ${listaMapasDefault[i]['socio'].endereco.cidade}, ${listaMapasDefault[i]['socio'].endereco.cidade}/${listaMapasDefault[i]['socio'].endereco.estado}, ${listaMapasDefault[i]['socio'].endereco.cep}";
+          dados = "CNPJ: ${listaMapasDefault[i]['socio'].documento}\nRazão social: ${listaMapasDefault[i]['socio'].nome}\nNome Fantasia: ${listaMapasDefault[i]['socio'].nomefantasia}\nEndereço: ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.numero}, ${listaMapasDefault[i]['socio'].endereco.bairro}, ${listaMapasDefault[i]['socio'].endereco.cidade}/${listaMapasDefault[i]['socio'].endereco.estado}, ${listaMapasDefault[i]['socio'].endereco.cep}";
         } catch(e){
-          dados = "CPF: ${listaMapasDefault[i]['socio'].documento}\nNome Completo: ${listaMapasDefault[i]['socio'].nome}\nEndereço: ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.numero}, ${listaMapasDefault[i]['socio'].endereco.bairro}, ${listaMapasDefault[i]['socio'].endereco.cidade}, ${listaMapasDefault[i]['socio'].endereco.cidade}/${listaMapasDefault[i]['socio'].endereco.estado}, ${listaMapasDefault[i]['socio'].endereco.cep}";
+          dados = "CPF: ${listaMapasDefault[i]['socio'].documento}\nNome Completo: ${listaMapasDefault[i]['socio'].nome}\nEndereço: ${listaMapasDefault[i]['socio'].endereco.logradouro}, ${listaMapasDefault[i]['socio'].endereco.numero}, ${listaMapasDefault[i]['socio'].endereco.bairro}, ${listaMapasDefault[i]['socio'].endereco.cidade}/${listaMapasDefault[i]['socio'].endereco.estado}, ${listaMapasDefault[i]['socio'].endereco.cep}";
         }
         print('''
 ID: ${listaMapasDefault[i]['id']}

@@ -1,4 +1,5 @@
 import 'socio.dart';
+
 class Sociopf extends Socio{
   String cpf;
 

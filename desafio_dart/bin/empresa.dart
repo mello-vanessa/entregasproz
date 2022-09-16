@@ -1,8 +1,8 @@
 import 'dart:io';
-
 import 'package:uuid/uuid.dart';
 import 'endereco.dart';
 import 'socio.dart';
+
 class Empresa {
   final _id = Uuid().v1();
   String? razaoSocial;

@@ -1,4 +1,5 @@
 import 'socio.dart';
+
 class Sociopj extends Socio{
   String cnpj;
   String? nomefantasia;

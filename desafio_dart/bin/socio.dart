@@ -1,4 +1,5 @@
 import 'endereco.dart';
+
 abstract class Socio{
   String nome;
   String _documento;
